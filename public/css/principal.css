@@ -1,0 +1,135 @@
+/*
+	Copyright (C) 2015  J-MED
+	Open TPM is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  background-image: url(http://enjoycss.com/webshots/42x_0.png);
+*/
+/*CODIGO PARA EL COLOR */
+h1, h2, h3, h4, h5, h6 {
+  color: #27ae60;
+}
+/*BACKGROUND DE LA PAGINA*/
+.page {
+  background: #FDE3A7;
+  padding: 0px;
+}
+#home-slider{
+  height: 91%;
+}
+/*MENU DE PROMOCIONES*/
+#home-slider .overlay {
+  background: RGBA(23, 126, 17, 0.46);
+}
+/*BARRA DE CATALAGO DE PROMOCIONES*/
+#home-slider .control-nav {
+  background: RGBA(66, 44, 32, 0.86);
+}
+
+/*CODIGO PARA COLORES DE LOS BOTOENES DE ADE ->  <- DE LA NAVEGACIÓN DE LAS FOTOS*/
+#home-slider #nextslide, #home-slider #prevslide {
+  background-color: RGBA(66, 44, 32, 0.86);
+}
+
+#home-slider #nextsection {
+  background-color: RGBA(66, 44, 32, 0.86);
+}
+/* CODIGO PARA COLOR DE LOS PUNTOS DE LAS IMAGENES*/
+#home-slider ul#slide-list li.current-slide a, #home-slider ul#slide-list li.current-slide a:hover {
+    background-color:  #26A65B;
+}
+/*BARRA DE MENU*/
+header .sticky-nav {
+    background: #006442;
+
+/*SOMBRA DE POSICIÓN DEL CURSOR SOBRE LOS MENUS*/
+nav#menu #menu-nav li.current a, nav#menu #menu-nav li a:hover {
+    color: #EFE40A;
+}
+/*LINKS aHREF*/
+a {
+    color: rgba(215, 29, 24, 0.86);
+}
+
+/*CUANDO PASAS EL MOUSE POR UN LINK*/
+a:hover, a:active, a:focus {
+  color: rgb(27, 84, 209);
+}
+
+/*-----------------------------------MENU LATERAL IZQUIERDO-----------------------------------------*/
+/*PRIMERA OPCION YA SELECCIONADA*/
+.work-nav #filters li a.selected {
+    color: #DE5E60;
+}
+/*MENU LATERAL IZQUIERDO | MOUSE SOBRE OPCION*/
+.work-nav #filters li a:hover {
+    color: #DE5E60;
+}
+/*COLOR DE LETRA PARA MENU LATERAL IZQUIERDO*/
+.work-nav #filters li a {
+    color: #000000;
+}
+/*DIV DEL SUBMENU LATERAL*/
+.span3 {
+    background-color: rgba(52, 41, 26, 0.94);
+}
+/*TITULO DEL SUBMENU LATERAL IZQUIERDO*/
+.type-work {
+    color: #27ae60;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*MIDDEL MENU*/
+.page-alternate {
+    background: RGBA(8, 77, 18, 0.8);
+    padding: 0px;
+  }
+/**/
+
+/*Color de texto para el body*/
+body {
+    color: #E4E3DD;
+}
+
+/*FORMULARIO PARA ENVIO DE CORREO | CONTACTO*/
+#contact-form input, #contact-form textarea {
+    background: RGBA(8, 77, 18, 0.8);
+    color: #FFFFFF;
+}
+
+/*BOTON DE ENVIO DE CORREO | CONTACTO*/
+#contact-form .submit {
+    background: RGBA(8, 77, 18, 0.8);
+    color: #f7f8fa;
+}
+
+/*CUADROS DE REDES SOCIALES*/
+#social ul li a {
+  background: RGBA(8, 77, 18, 0.8);
+}
+
+/*COLOR DE ICONOS DE REDES SOCIALES AL SER SELECCIONADOS*/
+#social ul li a span {
+  color: #f3f90b;
+}
+
+/*FOOTER*/
+footer {
+  background: RGBA(8, 77, 18, 0.8);
+}
+
+/* CSS CANVAS MAPA DE GOOGLDE*/
+#map-canvas{
+  height: 100%;
+  width: 100%;
+  margin: 2px;
+  padding: 0px;
+}
