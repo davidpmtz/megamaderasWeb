@@ -35,9 +35,10 @@
 	<!-- CSS
   ================================================== -->
   	<link rel="stylesheet" href="{{asset('css/reset.css')}}">
-	<link rel="stylesheet" href="{{asset('css/base.css')}}">
+	<link rel="stylesheet" href="{{asset('css/base2.css')}}">
 	<link rel="stylesheet" href="{{asset('css/skeleton.css')}}">
 	<link rel="stylesheet" href="{{asset('css/layout.css')}}">
+	@yield('css')
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -59,6 +60,7 @@
 			});
 		});
 	</script>
+	@yield('js')
 
 </head>
 <body>
@@ -73,12 +75,12 @@
 
 				<div class='eleven columns'>
 					<ul class='mainMenu'>
-						<li><a href='index.html' title='Home'>Home</a></li>
-						<li><a href='#' title='About us'>About us</a></li>
-						<li><a href='#' title='Pricing'>Pricing</a></li>
-						<li><a href='#' title='Blog'>Blog</a></li>
+						<li><a href='{{url('/')}}' title='Home'>Home</a></li>
+						<li><a href='#' title='About us'>Acerca de</a></li>
+						<li><a href='#' title='Pricing'>Productos</a></li>
+						<li><a href='#' title='Blog'>Servicios</a></li>
 						<li><a href='#' title='Portfolio'>Portfolio</a></li>
-						<li><a href='#' title='Contact'>Contact</a></li>
+						<li><a href='{{url('/contacto')}}' title='Contact'>Contacto</a></li>
 					</ul>
 				</div>
 			</div>
@@ -86,153 +88,28 @@
 
 		<div class='container'>
 			<div class='slogan'>
-				<div class='ten columns'>
-					<h1>Big catchy title</h1>
-					<h2>Bit smaller but still in need slogan</h2>
-				</div>
-
-				<div class='six columns'>
-					<h4>Offer EXCLUSIVE</h4>
-					<p>Nunc rhoncus, erat quis sagittis convallis, arcu tellus tempor felis, sed tempor ipsum lorem vitae dolor. Morbi blandit condimentum lectus, id porta est sagittis et. Integer eget tortor sit amet ante eleifend lacinia quis ut</p>
-					<a href='#' class='button medium green'>See the price</a>
-				</div>
+			@yield('header')
 			</div>
 		</div>
+		</header>
 	</header>
 
 
 	<div class='clear'></div>
-	<div class='clear'></div>
 
+	<div class="container">
+		<center> <h1> <strong> @yield('tittle')  </strong> </h1>  </center>
+	</div>
+
+	<div class='clear'></div>
+	<div class='clear'></div>
 
 	<div class='container'>
-
-		<div class='one-third column'>
-			<img src="{{asset('images/misc/about_us.png')}}">
-			<h3>About Us</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-		</div>
-
-
-		<div class='one-third column'>
-			<img src="{{asset('images/misc/team.png')}}">
-			<h3>The Team</h3>
-			<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur.</p>
-		</div>
-
-
-
-		<div class='one-third column'>
-			<img src="{{asset('images/misc/goals.png')}}">
-			<h3>Goals</h3>
-			<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-
+		@yield('content')
 	</div>
 
 
 	<div class='clear'></div>
-
-
-	<div class='orange'>
-
-		<div class='container'>
-			<h3>Get to know what we do</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-			<a href='#' class='dalej'>See closer what we do</a>
-		</div>
-
-	</div>
-
-
-	<div class='container focus'>
-
-		<h3>Packages</h3>
-
-		<div class='eight columns'>
-			<h4>WRITING</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-		</div>
-
-		<div class='eight columns'>
-			<h4>PRESENTATION</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-		</div>
-
-
-		<div class='clear'></div>
-
-
-		<div class='eight columns'>
-			<h4>NEGOTIATING</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-		</div>
-
-		<div class='eight columns'>
-			<h4>GRAMMAR</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-		</div>
-
-	</div>
-
-	<div class='clear'></div>
-	<div class='clear'></div>
-
-	<section class='gray'>
-		<div class='container'>
-			<div class='two-thirds column'>
-				<h3>Something About the team</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-
-			<div class='one-third column gallery'>
-				<h3>Get to know us</h3>
-				<a rel="example_group" href="{{asset('images/photos/1.jpg')}}"><img src="{{asset('images/photos/1.jpg')}}"></a>
-				<a rel="example_group" href="{{asset('images/photos/2.jpg')}}"><img src="{{asset('images/photos/2.jpg')}}"></a>
-				<a rel="example_group" href="{{asset('images/photos/3.jpg')}}"><img src="{{asset('images/photos/3.jpg')}}"></a>
-				<a rel="example_group" href="{{asset('images/photos/4.jpg')}}"><img src="{{asset('images/photos/4.jpg')}}"></a>
-			</div>
-		</div>
-	</section>
-
-
-	<div class='clear'></div>
-
-
-	<div class='container'>
-		<div class='sixteen columns form'>
-			<h3>Drop the beat wub dub dub</h3>
-			<p>Go ahead, write something. Send it, wait untill we response.</p>
-			<form>
-				<label>Your name, dude</label>
-				<input type='text' name='name' placeholder='Name or last name'>
-				<label>Now, where should we replay?</label>
-				<input type='text' name='mail' placeholder='Your e-mail address'>
-				<label>The hard part. Message</label>
-				<textarea cols='50' rows='15' name='message'></textarea>
-				<input type='submit' value='Let it fly!'>
-			</form>
-		</div>
-	</div>
-
-
 	<div class='clear'></div>
 
 
