@@ -129,11 +129,11 @@ ul.mainMenu li a:hover {color: #F9BF3B;
 /*
 * Form, input, label, textarea
 */
-.form h3, .form p {text-align: center;}
-form {width: 500px; margin: 30px auto; text-align: center;}
+.form h3, .form p {text-align: left;}
+form {width: 500px; margin: 30px auto; text-align: left;}
 input, label, textarea {width: 500px; float: left; margin: 0; padding: 0;}
 label {font-size: 12px; text-transform: uppercase; font-weight: 300; margin-bottom: 7px;}
-input {margin-bottom: 20px; padding: 7px 0; text-align: center;}
+input {margin-bottom: 20px; padding: 7px 0; text-align: left;}
 input, textarea {border: 1px solid #ddd; outline: none;}
 input:focus, textarea:focus {border-color: #b6b6b6;}
 textarea {width: 480px; padding: 7px 10px;}

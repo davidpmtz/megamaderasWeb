@@ -6,38 +6,34 @@
 
 <div class='one-third column'>
   <img src='images/misc/about_us.png'>
-  <h3>About Us</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+  <h3>Acerca de </h3>
+  <p>Somos una empresa que se preocupa por sus clientes para mantener la satisfacción de estos
+  lo más alta posible y así cumplir con sus expectativas
+</p>
 </div>
 
 
 <div class='one-third column'>
   <img src='images/misc/team.png'>
-  <h3>The Team</h3>
-  <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur.</p>
+  <h3>¿En que puedo ayudarte?</h3>
+  <p>Todo el equipo de MegaMaderas esta aqui para ayudarte a resolver cualquiera de tus dudas que tengas en
+    relación a nosotros, nuestros productos, nuestros servicios. </p>
 </div>
 
 
 
 <div class='one-third column'>
   <img src='images/misc/goals.png'>
-  <h3>Goals</h3>
-  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <h3>Objetivo</h3>
+  <p>MegaMaderas tiene como objetivo ser la mejor empresa proveedora de maderas para todos los clientes del país.</p>
 </div>
 
+<tr>
+
   <div class='sixteen columns form'>
-    <h3>Drop the beat wub dub dub</h3>
-    <p>Go ahead, write something. Send it, wait untill we response.</p>
-    <form>
-      <label>Your name, dude</label>
-      <input type='text' name='name' placeholder='Name or last name'>
-      <label>Now, where should we replay?</label>
-      <input type='text' name='mail' placeholder='Your e-mail address'>
-      <label>The hard part. Message</label>
-      <textarea cols='50' rows='15' name='message'></textarea>
-      <input type='submit' value='Let it fly!'>
-    </form>
+    <h3>Déjanos un mensaje con tus datos y nosotros te contactaremos a la brevedad.</h3>
+    <p>Los tiempos de respuesta varían en relación a la demanda.</p>
   </div>
+  
+
 @endsection

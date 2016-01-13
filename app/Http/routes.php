@@ -13,9 +13,15 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/prueba', 'WelcomeController@store');
-Route::get('/contacto', 'WelcomeController@contact');
+
 
 Route::get('home', 'HomeController@index');
+
+Route::group(array('prefix' => '/','namespace'=>'Frontend'), function()
+{
+	 Route::resource('contacto','MessageController');
+
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
