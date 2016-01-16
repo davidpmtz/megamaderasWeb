@@ -71,7 +71,10 @@ class ProductController extends Controller {
 	{
 		//
 		$producto = Productos::find($id);
-		return view('Backend.Products.update',['producto' => $producto]);
+		$tipos = Tipos::orderBy('tipo','ASC')->lists('tipo','id');
+		return view('Backend.Products.update',['producto' => $producto,
+																					'tipos' => $tipos
+	]);
 	}
 
 	/**
@@ -80,13 +83,26 @@ class ProductController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update(Reques $request)
-	{
-		//
-		//Tipos::where('tipo', '=', $request->tipo)->update(['tipo' => $request->tipo,'lastModify_by' => $request->lastModify_by]);
-		//Flash::success("El tipo " .$request->tipo. " ha sido modificado correctamente");
-		//return redirect()->route('admin.types.index');
-	}
+	 public function update(Request $request, $id)
+ 	{
+
+
+ 		$productUpdate = Productos::find($id);
+ 		$productUpdate->nombre = $request->nombre;
+ 		$productUpdate->descripcion = $request->descripcion;
+ 		$productUpdate->precio = $request->precio;
+ 		$productUpdate->tipo_id = $request->tipo_id;
+		$productUpdate->lastModify_by = $request->lastModify_by;
+		$productUpdate->cantidad = $request->cantidad;
+		$productUpdate->view = $request->view;
+
+
+ 	  $productUpdate->save();
+
+ 		Flash::success("El producto " .$productUpdate->nombre. " ha sido modificado correctamente");
+ 		return redirect()->route('admin.products.index');
+
+ 	}
 
 	/**
 	 * Remove the specified resource from storage.
