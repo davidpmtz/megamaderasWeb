@@ -77,7 +77,7 @@
 					<ul class='mainMenu'>
 						<li><a href='{{url('/')}}' title='Home'>Home</a></li>
 						<li><a href='#' title='About us'>Acerca de</a></li>
-						<li><a href='#' title='Pricing'>Productos</a></li>
+						<li><a href='{{url('/producto')}}' title='Productos'>Productos</a></li>
 						<li><a href='#' title='Blog'>Servicios</a></li>
 						<li><a href='#' title='Portfolio'>Portfolio</a></li>
 						<li><a href='{{url('/contacto')}}' title='Contact'>Contacto</a></li>
