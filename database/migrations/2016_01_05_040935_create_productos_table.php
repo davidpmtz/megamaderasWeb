@@ -20,6 +20,10 @@ class CreateProductosTable extends Migration {
 			$table->float('precio');
 			$table->integer('tipo_id')->unsigned();
 			$table->foreign('tipo_id')->references('id')->on('tipos');
+			$table->string('lastModify_by');
+			$table->string('timesClicked')->nullable;
+			$table->integer('cantidad');
+			$table->char('view');
 			$table->timestamps();
 			$table->softDeletes();
 		});

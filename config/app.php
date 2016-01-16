@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Mexico_City',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -145,6 +145,7 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'Laracasts\Flash\FlashServiceProvider',
 
 	],
 
@@ -195,6 +196,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form' => 'Collective\Html\FormFacade',
 		'Html' => 'Collective\Html\HtmlFacade',
+		'Flash' => 'Laracasts\Flash\Flash',
 
 	],
 

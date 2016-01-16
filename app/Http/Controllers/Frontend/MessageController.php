@@ -2,7 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Contacto;
+use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller {
@@ -36,7 +37,14 @@ class MessageController extends Controller {
 	public function store(Request $request)
 	{
 		//
-		dd($request);
+		$mensaje = new Contacto;
+		$mensaje->name = $request->name;
+		$mensaje->telephone = $request->telephone;
+		$mensaje->email = $request->email;
+		$mensaje->message = $request->message;
+		$mensaje->save();
+		Flash::success("El mensaje ha sido enviado correctamente");
+		return redirect('/contacto');
 	}
 
 	/**

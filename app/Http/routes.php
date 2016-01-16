@@ -12,7 +12,9 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::get('/prueba', 'WelcomeController@store');
+Route::get('/admin', function(){
+	 return redirect('/admin/home');
+});
 
 
 Route::get('home', 'HomeController@index');
@@ -20,6 +22,23 @@ Route::get('home', 'HomeController@index');
 Route::group(array('prefix' => '/','namespace'=>'Frontend'), function()
 {
 	 Route::resource('contacto','MessageController');
+
+});
+
+Route::group(array('prefix' => 'admin','namespace'=>'Backend'), function()
+{
+	 Route::resource('home','AdminController');
+	 Route::resource('products','ProductController');
+	 Route::resource('types','TypeController');
+	 Route::get('products/{id}/destroy',[
+	 'uses' => 'ProductController@destroy',
+	 'as' => 'Backend.products.destroy'
+ ]);
+ Route::get('types/{id}/destroy',[
+ 'uses' => 'TypeController@destroy',
+ 'as' => 'Backend.types.destroy'
+]);
+
 
 });
 

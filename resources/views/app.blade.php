@@ -38,6 +38,10 @@
 	<link rel="stylesheet" href="{{asset('css/base2.css')}}">
 	<link rel="stylesheet" href="{{asset('css/skeleton.css')}}">
 	<link rel="stylesheet" href="{{asset('css/layout.css')}}">
+
+	<!--CSS BOOTSTRAP -->
+
+
 	@yield('css')
 
 	<!--[if lt IE 9]>
@@ -60,6 +64,9 @@
 			});
 		});
 	</script>
+
+	<!-- JS BOOTSTRAP-->
+
 	@yield('js')
 
 </head>
@@ -96,7 +103,7 @@
 
 
 	<div class='clear'></div>
-
+@include('flash::message')
 	<div class="container">
 		<center> <h1> <strong> @yield('tittle')  </strong> </h1>  </center>
 	</div>
@@ -139,6 +146,8 @@
 
 
 		<a id='top' href='#'>&uarr;</a>
+
+
 		</div>
 	</footer>
 	<script type="text/javascript">
