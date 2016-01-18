@@ -34,6 +34,7 @@
 
 	<!-- CSS
   ================================================== -->
+	<link rel="stylesheet" type="text/css" href="{{asset('js/fancybox/jquery.fancybox-1.3.4.css')}}" media="screen" />
   	<link rel="stylesheet" href="{{asset('css/reset.css')}}">
 	<link rel="stylesheet" href="{{asset('css/base2.css')}}">
 	<link rel="stylesheet" href="{{asset('css/skeleton.css')}}">
@@ -49,22 +50,9 @@
 	<![endif]-->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<script type="text/javascript" src="{{asset('js/index.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/validate.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/fancybox/jquery.fancybox-1.3.4.pack.js')}}"></script>
-	<link rel="stylesheet" type="text/css" href="{{asset('js/fancybox/jquery.fancybox-1.3.4.css')}}" media="screen" />
-	<script type="text/javascript">
-		$(document).ready(function() {
-				$("a[rel=example_group]").fancybox({
-				'transitionIn'		: 'none',
-				'transitionOut'		: 'none',
-				'titlePosition' 	: 'over',
-				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
-					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
-				}
-			});
-		});
-	</script>
-
 	<!-- JS BOOTSTRAP-->
 
 	@yield('js')
@@ -84,8 +72,8 @@
 					<ul class='mainMenu'>
 						<li><a href='{{url('/')}}' title='Home'>Home</a></li>
 						<li><a href='#' title='About us'>Acerca de</a></li>
-						<li><a href='#' title='Pricing'>Productos</a></li>
-						<li><a href='#' title='Blog'>Servicios</a></li>
+						<li><a href='{{url('/Productos')}}' title='Productos'>Productos</a></li>
+						<li><a href='{{url('/Servicios')}}' title='Servicios'>Servicios</a></li>
 						<li><a href='#' title='Portfolio'>Portfolio</a></li>
 						<li><a href='{{url('/contacto')}}' title='Contact'>Contacto</a></li>
 					</ul>
@@ -93,7 +81,7 @@
 			</div>
 		</nav>
 
-		<div class='container'>
+		<div class='container' style="height:120px">
 			<div class='slogan'>
 			@yield('header')
 			</div>
@@ -101,14 +89,10 @@
 		</header>
 	</header>
 
-
-	<div class='clear'></div>
 @include('flash::message')
 	<div class="container">
 		<center> <h1> <strong> @yield('tittle')  </strong> </h1>  </center>
 	</div>
-
-	<div class='clear'></div>
 	<div class='clear'></div>
 
 	<div class='container'>

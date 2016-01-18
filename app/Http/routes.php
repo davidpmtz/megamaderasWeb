@@ -21,7 +21,9 @@ Route::get('home', 'HomeController@index');
 
 Route::group(array('prefix' => '/','namespace'=>'Frontend'), function()
 {
-	 Route::resource('contacto','MessageController');
+	Route::resource('contacto','MessageController');
+	Route::resource('Productos','ProductosController@productos');
+	Route::resource('Servicios','ServiciosController@index');
 
 });
 

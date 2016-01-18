@@ -18,8 +18,9 @@ class Productos extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['nombre',
-	 'descripcion',
+	protected $fillable = [
+		'nombre',
+		'descripcion',
 	  'precio',
 		'tipo_id',
 		'lastModify_by',
