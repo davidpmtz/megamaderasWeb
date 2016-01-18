@@ -1,11 +1,11 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Frontend;
 
-#use App\Http\Requests;
-#use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Laracasts\Flash\Flash;
+use Illuminate\Http\Request;
 
-#use Illuminate\Http\Request;
-
-class ProductosController extends Controller {
+class ServiciosController extends Controller {
 
 	/**
 	 * Create a new controller instance.
@@ -22,14 +22,9 @@ class ProductosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	 public function index()
-	 {
-		 return view('products.index');
-	 }
-
-	public function productos()
+	public function index()
 	{
-		return view('products.index');
+		return view('Frontend.services.services');
 	}
 
 	/**
