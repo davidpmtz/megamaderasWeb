@@ -40,8 +40,8 @@
               <li><a href="{{url('admin/types')}}">Tipos de producto</a></li>
             </ul>
           </li>
-          <li class="@yield('activeServices')"><a href="#">Servicios</a></li>
-          <li class="@yield('activeMessage')"><a href="#">Mensajes</a></li>
+          <li class="@yield('activeServices')"><a href="{{asset(url('/admin/services'))}}">Servicios</a></li>
+          <li class="@yield('activeMessage')"><a href="{{asset(url('/admin/messages'))}}">Mensajes</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">

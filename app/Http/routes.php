@@ -31,15 +31,21 @@ Route::group(array('prefix' => 'admin','namespace'=>'Backend'), function()
 {
 	 Route::resource('home','AdminController');
 	 Route::resource('products','ProductController');
+	 Route::resource('services','ServiceController');
 	 Route::resource('types','TypeController');
+	 Route::resource('messages','TypeController');
 	 Route::get('products/{id}/destroy',[
 	 'uses' => 'ProductController@destroy',
 	 'as' => 'Backend.products.destroy'
- ]);
- Route::get('types/{id}/destroy',[
- 'uses' => 'TypeController@destroy',
- 'as' => 'Backend.types.destroy'
-]);
+	 ]);
+	 Route::get('types/{id}/destroy',[
+	 'uses' => 'TypeController@destroy',
+	 'as' => 'Backend.types.destroy'
+		]);
+		Route::get('services/{id}/destroy',[
+ 	 'uses' => 'ServiceController@destroy',
+ 	 'as' => 'Backend.services.destroy'
+ 		]);
 
 
 });
