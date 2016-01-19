@@ -84,6 +84,18 @@
 	margin-left: 1%
 }
 
+#divVerMas {
+	float           : left;
+  margin          : 5% 0% 0% 40%;
+	background-color: rgba(121, 85, 72, 0.48);
+	border-radius   : 4px;
+	padding					: 10px;
+}
+
+#divVerMas:hover{
+	background-color: rgba(121, 85, 72, 0.64);
+}
+
 #fancybox-wrap{
 	height: 420px;
 }
@@ -95,4 +107,15 @@
 .fancybox-title-over{
 	height: 30%;
 	background-color: #655252;
+	background-image: none;
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px)
+.container .eight.columns {
+    width: 280px;
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px)
+.container .four.columns {
+    width: 210px;
 }

@@ -4,8 +4,12 @@ $(document).ready(function() {
     width: 420,
     padding: 0,
     beforeShow: function() {
-      this.title = $(this.element).attr('title');
-      this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
+      /*this.title = $(this.element).attr('title');
+      /*this.title = '<h4>'+'Algo' + this.title + '' +
+                   '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>'+
+                   '<p>'+'Algo mas'+'</p> </h4>';
+     this.title = $(this.element).attr('title');
+      this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';*/
     },
     helpers: {
       title: {
@@ -35,10 +39,12 @@ function nextPageProductos(page,nPage) {
   })
   .done(function(response) {
     var newRes = response.split('<!---->');
-    console.log(newRes[1].indexOf('='));
+    //console.log(newRes[1].indexOf('='));
     if (newRes[1].indexOf('=')<0) {
-      $('#aNextPage').hide();
+      $('html, body').animate({ scrollTop: $('#divVerMas').offset().top }, 'slow');
+      $('#divVerMas').hide();
     }else {
+      $('html, body').animate({ scrollTop: $('#divVerMas').offset().top }, 'slow');
       $('#aNextPage').attr('href',newRes[1]);
     }
     $('#divProductos').append(newRes[0]);
@@ -47,8 +53,10 @@ function nextPageProductos(page,nPage) {
       width: 420,
       padding: 0,
       beforeShow: function() {
-        this.title = $(this.element).attr('title');
-        this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
+        this.title = $(this.element).attr('title')+'Hola';
+        /*this.title = '<h4>'+'Algo' + this.title + '' +
+                     '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>'+
+                     '<p>'+'Algo mas'+'</p> </h4>';*/
       },
       helpers: {
         title: {
@@ -60,10 +68,10 @@ function nextPageProductos(page,nPage) {
 
   })
   .fail(function() {
-    console.log("error");
+    //console.log("error");
   })
   .always(function() {
-    console.log("complete");
+    //console.log("complete");
   });
 
 }

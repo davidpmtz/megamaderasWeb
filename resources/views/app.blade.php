@@ -50,9 +50,9 @@
 	<![endif]-->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-	<script type="text/javascript" src="{{asset('js/index.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/validate.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/fancybox/jquery.fancybox-1.3.4.pack.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/index.js')}}"></script>
 	<!-- JS BOOTSTRAP-->
 
 	@yield('js')
@@ -75,7 +75,7 @@
 						<li><a href='{{url('/Productos')}}' title='Productos'>Productos</a></li>
 						<li><a href='{{url('/Servicios')}}' title='Servicios'>Servicios</a></li>
 						<li><a href='#' title='Portfolio'>Portfolio</a></li>
-						<li><a href='{{url('/contacto')}}' title='Contact'>Contacto</a></li>
+						<li><a href='{{url('/contacto')}}' title='Contacto'>Contacto</a></li>
 					</ul>
 				</div>
 			</div>
@@ -108,26 +108,23 @@
 		<div class='container'>
 
 			<div class='eight columns'>
-				<h5>Some stuff can go here</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<h5>Dirección</h5>
+				<p>Aquí irá la dirección completa</p>
 			</div>
 
 			<div class='four columns social'>
 				<h5>Social media</h5>
-				<a href='#'><img src="images/social/dribbble.png"></a>
 				<a href='#'><img src="{{asset('images/social/facebook.png')}}"></a>
 				<a href='#'><img src="{{asset('images/social/twitter.png')}}"></a>
-				<a href='#'><img src="{{asset('images/social/forrst.png')}}"></a>
 			</div>
 
 			<div class='four columns'>
-				<h5>Get in touch</h5>
-				<p>You can call us at:<br>
-					t: 161 - 123 - CALL - NOW</p>
-				<p>Or drop us a line on:
-					e: <a href='mailto:contact@free.com'>contact@free.com</a></p>
+				<h5>Contáctanos</h5>
+				<p>Puedes llamarnos al:<br>
+					333 333 3333</p>
+				<p>O via email:
+					<a href='megamaderas@mx.com'>megamaderas@mx.com</a></p>
 			</div>
-
 
 		<a id='top' href='#'>&uarr;</a>
 
