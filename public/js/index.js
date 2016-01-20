@@ -40,12 +40,17 @@ function nextPageProductos(page,nPage) {
   .done(function(response) {
     var newRes = response.split('<!---->');
     //console.log(newRes[1].indexOf('='));
+http://www.megamaderas.mx/public/Productos?page&page=3
+http://www.megamaderas.mx/Productos?page&page=3
     if (newRes[1].indexOf('=')<0) {
       $('html, body').animate({ scrollTop: $('#divVerMas').offset().top }, 'slow');
       $('#divVerMas').hide();
     }else {
       $('html, body').animate({ scrollTop: $('#divVerMas').offset().top }, 'slow');
-      $('#aNextPage').attr('href',newRes[1]);
+      //$('#aNextPage').attr('href',newRes[1]);//this work
+      var arrayNewUrl = newRes[1].split('mx/');
+      var newUrl = arrayNewUrl[0]+'mx/public/'+arrayNewUrl[1];
+      $('#aNextPage').attr('href',newRUrl);
     }
     $('#divProductos').append(newRes[0]);
     $(".fancybox").fancybox({
